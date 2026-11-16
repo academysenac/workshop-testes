@@ -1,0 +1,70 @@
+Sobre a tarefa
+1. O app deve criar uma tarefa com descrição, status inicial não completo e prioridade.
+2. O app deve permitir alterar a descrição da tarefa.
+3. O app deve permitir marcar a tarefa como completa.
+4. O app deve permitir marcar a tarefa como não completa.
+5. O app deve permitir alterar a prioridade da tarefa para baixa, média ou alta.
+
+Sobre a lista de tarefas
+1. O app deve permitir criar uma lista de tarefas para um usuário.
+2. O app deve permitir cadastrar uma tarefa na lista.
+3. O app deve impedir o cadastro de tarefas com descrições duplicadas na mesma lista.
+4. O app deve permitir consultar uma tarefa pelo índice na lista.
+5. O app deve permitir consultar uma tarefa pela descrição.
+6. O app deve permitir visualizar a quantidade de tarefas cadastradas.
+7. O app deve permitir consultar o proprietário da lista.
+8. O app deve permitir marcar uma tarefa como completa pelo índice.
+9. O app deve permitir marcar uma tarefa como completa pela descrição.
+10. O app deve permitir remover uma tarefa pelo índice.
+11. O app deve permitir remover uma tarefa pela descrição.
+12. O app deve permitir alterar a prioridade de uma tarefa pelo índice.
+13. O app deve permitir alterar a prioridade de uma tarefa pela descrição.
+14. O app deve permitir alterar a descrição de uma tarefa.
+15. O app deve impedir a alteração para uma descrição já usada por outra tarefa da lista.
+16. O app deve reorganizar automaticamente as tarefas após o cadastro de uma nova tarefa.
+17. O app deve reorganizar automaticamente as tarefas após marcar uma tarefa como completa.
+18. O app deve reorganizar automaticamente as tarefas após alterar uma prioridade.
+19. O app deve exibir primeiro as tarefas não completas, ordenadas por prioridade: alta, média e baixa.
+20. O app deve exibir as tarefas completas depois das não completas.
+21. O app deve permitir cadastrar uma tarefa duplicada que já esteja completa.
+
+
+Sobre usuários e autenticação
+1. O app deve permitir cadastrar um usuário com nome, e-mail e senha.
+2. O app deve impedir o cadastro de usuários com e-mail duplicado.
+3. O app deve validar se a senha contém letra maiúscula, letra minúscula, número e caractere especial.
+4. O app deve validar se a senha tem entre seis e quinze caracteres.
+5. O app deve armazenar a senha de forma protegida, usando hash.
+6. O app deve permitir autenticar um usuário com e-mail e senha.
+7. O app deve rejeitar credenciais inválidas.
+8. O app deve impedir operações na lista quando o usuário não for válido ou não tiver uma lista associada.
+9. O app deve permitir visualizar os usuários cadastrados.
+10. O app deve permitir alterar a senha.
+11. O app deve permitir o usuário cadastrar uma senha fraca.
+12. O app deve permitir remover usuário.
+
+UseCases
+ChangeItem
+1. O app deve permitir alterar a descrição de uma tarefa já registrada na lista do usuário.
+2. O app deve informar um erro quando a descrição for alterada para um usuário inválido.
+3. O app deve permitir alterar a prioridade de uma tarefa já registrada na lista do usuário.
+4. O app deve informar um erro quando a prioridade for alterada para um usuário inválido.
+
+CompleteTodoItem
+1. O app deve permitir completar a tarefa na lista de tarefas do usuário
+2. O app deve gerar exceção de 'usuário inválido!' ao tentar completar uma tarefa de um usuário não cadastrado
+
+CreateTodoItem
+1. O app deve permitir registrar uma nova tarefa na lista de tarefas do usuário.
+2. O app deve gerar exceção de 'usuário inválido!' ao tentar cadastrar uma tarefa  e associar a um usuário não cadastrado
+3. O app deve gerar exceção com a mensagem: "Já existe uma tarefa com essa descrição." Para os itens duplicados
+
+CreateTodoList
+1. O app deve permitir cadastrar uma lista de tarefas do usuário com sucesso.
+2. O app deve gerar exceção para as tentativas de cadastros de tarefas para usuários inválidos.
+3. O app deve impedir a criação de mais de uma lista de tarefas para o mesmo usuário.
+
+GetTodoList
+1. O app deve permitir recuperar uma lista de tarefas de um usuário cadastrado.
+2. O app deve gerar erro ao tentar recuperar uma lista de tarefas de um usuário inexistente.
+
